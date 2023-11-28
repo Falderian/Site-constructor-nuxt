@@ -1,1 +1,37 @@
-$bg-primary-color: #e2e2e2;
+$color-bg-primary: white;
+$color-bg-secondary: #e2e2e2;
+$color-btn-active: #55c3ff;
+$border-1: 2px solid black;
+$color-text-secondary: #23a6f0;
+$color-text-gray: #737373;
+
+.pad-1 {
+  padding: 1rem;
+}
+
+.bold {
+  font-weight: bold;
+  color: black !important ;
+  scale: 1.2;
+}
+
+.border-1 {
+  border: $border-1;
+}
+
+.border-1-r {
+  border-right: $border-1;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.anim-fade-in {
+  animation: fade-in 0.5s linear;
+}
