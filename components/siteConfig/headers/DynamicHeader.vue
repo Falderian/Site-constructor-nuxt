@@ -1,7 +1,5 @@
 <template>
-  <div class="dynamic-header">
-    <component :is="variant" :config="config" />
-  </div>
+  <component :is="variant" :config="config" />
 </template>
 
 <script setup lang="ts">
@@ -19,7 +17,6 @@ const config = {
     liked: 1,
   }
 };
-
 
 </script>
 

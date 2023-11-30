@@ -1,12 +1,14 @@
 <template>
   <section class="skeleton border-1-r pad-1">
     <DynamicHeader :variant="currentOptions.header" />
+    <DynamicBody :variant="currentOptions.body" />
   </section>
 </template>
 
 <script setup lang="ts">
 import { useSiteOptions } from "@/stores/siteOptions";
 import DynamicHeader from "@/components/siteConfig/headers/DynamicHeader.vue";
+import DynamicBody from "@/components/siteConfig/bodies/DynamicBody.vue";
 
 const siteOptions = useSiteOptions();
 const { header, body, footer } = siteOptions.currentSiteOptions;
