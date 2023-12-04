@@ -27,7 +27,7 @@ const backgroundImage = `url(/images/${config.bkgImage})`;
 <style lang="scss" scoped>
 .carousel {
   display: grid;
-  grid-template-columns: 10rem 1fr 2fr;
+  grid-template-columns: 0.2fr 1fr 2fr;
 
   background-position: top;
   background-repeat: no-repeat;

@@ -2,12 +2,17 @@
 <template >
   <div class="anim-fade-in">
     <BodyCarousel :config="carouselConfig" />
+    <div class="body-layout">
+      <EditorsPick />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import type { TCarouselConfig } from '@/utils/types';
 import BodyCarousel from './BodyCarousel.vue';
+import EditorsPick from './EditorsPick.vue';
+
 
 const carouselConfig: TCarouselConfig = {
   bkgImage: 'bodyOne.svg',
@@ -20,3 +25,9 @@ const carouselConfig: TCarouselConfig = {
 }
 
 </script>
+
+<style lang="scss" scoped>
+.body-layout {
+  padding: 2rem 0;
+}
+</style>

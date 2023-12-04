@@ -13,10 +13,6 @@ const { action, className, text } = defineProps({
 </script>
 
 <style scoped lang="scss">
-.green {
-  background-color: $color-green;
-}
-
 .btn {
   padding: 1rem;
   width: fit-content;
@@ -33,6 +29,19 @@ const { action, className, text } = defineProps({
   &:hover {
     border: 1px solid white;
     scale: 1.1;
+  }
+}
+
+.green {
+  background-color: $color-green;
+}
+
+.transparent {
+  background-color: transparent;
+  border: 1px solid white;
+
+  &:hover {
+    scale: 1;
   }
 }
 </style>
