@@ -15,19 +15,9 @@ const { variant } = defineProps({
 
 <script lang="ts">
 import BodyOne from "./bodyOne/BodyOne.vue";
-import BodyTwo from "./BodyTwo.vue";
+import BodyTwo from "./bodyTwo/BodyTwo.vue";
 
 export default {
   components: { BodyOne, BodyTwo },
 };
 </script>
-
-<style lang="scss" scoped>
-.dynamic-body {
-  display: flex;
-  max-height: 70%;
-
-  overflow: hidden;
-
-}
-</style>

@@ -31,5 +31,6 @@ siteOptions.$onAction(({ name, after }) => {
   flex-direction: column;
 
   background-color: $color-bg-primary;
+  overflow: auto;
 }
 </style>
