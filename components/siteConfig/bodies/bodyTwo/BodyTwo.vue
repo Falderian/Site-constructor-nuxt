@@ -10,13 +10,15 @@
       <img src="/images/bodyTwo.svg" class="body-two__img" />
     </div>
     <IconsRow :icons="icons" />
-    <Table :items="tableItems" />
+    <Grid :items="tableItems" />
+    <FeaturedProducts :config="productsConfig" />
   </div>
 </template>
 
 <script setup lang="ts">
 import IconsRow from '@/components/IconsRow.vue';
-import { default as Table } from '@/components/grids/tableOneTwo.vue';
+import { default as Grid } from '@/components/grids/tableOneTwo.vue';
+import FeaturedProducts from '../FeaturedProducts.vue';
 const content = {
   subheading: 'Summer 2023',
   heading: "New collection",
@@ -35,6 +37,20 @@ const tableItems = [{
   btnText
 }, { title: 'Top Product Of the Year', img: 'topThree.jpeg', btnText }]
 
+const productDesign = {
+  title: 'Graphic Design',
+  desc: 'English Department',
+  price: '16.48$',
+  discount: '6.48$',
+  colors: ['#23A6F0', '#23856D', '#E77C40', '#252B42']
+}
+
+const productsConfig = {
+  title: 'Featured Products',
+  heading: 'BESTSELLER PRODUCTS',
+  subheading: 'Problems trying to resolve the conflict between',
+  items: Array(8).fill(productDesign)
+}
 
 </script>
 
