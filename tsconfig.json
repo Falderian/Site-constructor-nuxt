@@ -3,6 +3,11 @@
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "types": ["@pinia/nuxt"],
-    "paths": { "@components/*": ["./components/*"] }
+    "paths": {
+      "@/components/*": ["./components/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/stores/*": ["./stores/*"],
+      "@/assets/*": ["./assets/*"]
+    }
   }
 }
