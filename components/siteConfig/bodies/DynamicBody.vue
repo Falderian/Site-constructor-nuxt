@@ -21,3 +21,13 @@ export default {
   components: { BodyOne, BodyTwo },
 };
 </script>
+
+<style lang="scss" scoped>
+.dynamic-body {
+  display: flex;
+  max-height: 70%;
+
+  overflow: hidden;
+
+}
+</style>

@@ -1,10 +1,8 @@
 <template>
   <section class="config border-1-r pad-1">
     <section v-for="(values, optionName) in availableOptions" :key="optionName">
-      <select
-        @change="setSiteOption(optionName, options[optionName])"
-        v-model="options[optionName]"
-      >
+      <select @change="setSiteOption(optionName, options[optionName])" v-model="options[optionName]"
+        class="config__option">
         <option v-for="option in values" :key="option">
           {{ option }}
         </option>
@@ -30,5 +28,8 @@ const options: TSiteOptions = {
 .config {
   display: flex;
   flex-direction: column;
+
+  gap: 1rem;
+
 }
 </style>
