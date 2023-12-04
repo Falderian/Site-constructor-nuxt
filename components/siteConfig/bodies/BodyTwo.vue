@@ -7,24 +7,20 @@
       <span>{{ content.description }}</span>
       <BaseButton text="Shop now" class-name="green" />
     </div>
-    <NuxtImg src="/images/bodyTwo.svg" class="body-two__img" />
+    <img src="/images/bodyTwo.svg" class="body-two__img" />
   </div>
 </template>
 
 <script setup lang="ts">
 import type { TCarouselConfig } from '@/utils/types';
 
-const { bkgImage, content } = {
-  bkgImage: 'bodyTwo.svg',
-  content: {
-    subheading: 'Summer 2023',
-    heading: "New collection",
-    description: 'We know how large objects will act, but things on a small scale.',
-    btnText: 'Shop now'
-  }
+const content = {
+  subheading: 'Summer 2023',
+  heading: "New collection",
+  description: 'We know how large objects will act, but things on a small scale.',
+  btnText: 'Shop now'
 }
 
-const backgroundImage = `url(/images/${bkgImage})`;
 
 </script>
 
