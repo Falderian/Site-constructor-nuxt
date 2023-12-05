@@ -12,6 +12,7 @@
     <IconsRow :icons="icons" />
     <Grid :items="tableItems" />
     <FeaturedProducts :config="productsConfig" />
+    <FeaturedAbout />
   </div>
 </template>
 
@@ -19,6 +20,8 @@
 import IconsRow from '@/components/IconsRow.vue';
 import { default as Grid } from '@/components/grids/tableOneTwo.vue';
 import FeaturedProducts from '../FeaturedProducts.vue';
+import FeaturedAbout from '../FeaturedAboutOne.vue';
+
 const content = {
   subheading: 'Summer 2023',
   heading: "New collection",

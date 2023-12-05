@@ -5,6 +5,7 @@
     <div class="body-layout">
       <EditorsPick />
       <FeaturedProducts :config="productsConfig" />
+      <FeaturedAboutTwo :config="aboutConfig" />
     </div>
   </div>
 </template>
@@ -14,6 +15,7 @@ import type { TCarouselConfig } from '@/utils/types';
 import BodyCarousel from './BodyCarousel.vue';
 import EditorsPick from './EditorsPick.vue';
 import FeaturedProducts from '../FeaturedProducts.vue';
+import FeaturedAboutTwo from '../FeaturedAboutTwo.vue';
 
 
 const carouselConfig: TCarouselConfig = {
@@ -43,6 +45,15 @@ const productsConfig = {
   items: Array(8).fill(productDesign)
 }
 
+const aboutConfig = {
+  img: 'about-2.jpg',
+  info: {
+    subheading: 'Summer 2023',
+    heading: 'Part of the Neural Universe',
+    desc: 'We know how large objects will act, but things on a small scale.',
+    btns: [{ text: 'Buy now', class: 'green' }, { text: 'Read more', class: 'transparent' }]
+  }
+}
 </script>
 
 <style lang="scss" scoped>
