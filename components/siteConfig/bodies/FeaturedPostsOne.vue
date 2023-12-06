@@ -39,7 +39,7 @@ const { config } = defineProps({ config: { type: Object, required: true } })
   flex-direction: column;
   align-items: center;
 
-  gap: 1rem;
+  gap: 2rem;
 
   h4 {
     color: $color-text-secondary;
@@ -170,22 +170,22 @@ const { config } = defineProps({ config: { type: Object, required: true } })
     gap: 2rem;
 
   }
-}
 
-.container-posts .posts {
-  flex-wrap: wrap;
-  gap: 2rem;
-
-  .post {
-    width: 100%;
+  .container-posts .posts {
     flex-wrap: wrap;
+    gap: 2rem;
 
-    &__img {
-      height: 50%;
-    }
+    .post {
+      width: 100%;
+      flex-wrap: wrap;
 
-    &__content {
-      width: 80%;
+      &__img {
+        height: 50%;
+      }
+
+      &__content {
+        width: 80%;
+      }
     }
   }
 }

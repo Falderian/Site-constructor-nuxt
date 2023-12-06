@@ -2,6 +2,7 @@
   <section class="skeleton border-1-r pad-1">
     <DynamicHeader :variant="currentOptions.header" />
     <DynamicBody :variant="currentOptions.body" />
+    <DynamicFooter :variant="currentOptions.footer" />
   </section>
 </template>
 
@@ -9,6 +10,7 @@
 import { useSiteOptions } from "@/stores/siteOptions";
 import DynamicHeader from "@/components/siteConfig/headers/DynamicHeader.vue";
 import DynamicBody from "@/components/siteConfig/bodies/DynamicBody.vue";
+import DynamicFooter from "@/components/siteConfig/footers/DynamicFooter.vue"
 
 const siteOptions = useSiteOptions();
 const { header, body, footer } = siteOptions.currentSiteOptions;
@@ -32,5 +34,6 @@ siteOptions.$onAction(({ name, after }) => {
 
   background-color: $color-bg-primary;
   overflow: auto;
+  gap: 2rem;
 }
 </style>
