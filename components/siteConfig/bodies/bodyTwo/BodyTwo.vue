@@ -22,7 +22,7 @@ import IconsRow from '@/components/IconsRow.vue';
 import Grid from '@/components/grids/tableOneTwo.vue';
 import FeaturedProducts from '../FeaturedProducts.vue';
 import FeaturedAbout from '../FeaturedAboutOne.vue';
-import FeaturedPosts from '../FeaturedPosts.vue';
+import FeaturedPosts from '../FeaturedPostsOne.vue';
 
 
 
@@ -140,6 +140,17 @@ const postsConfig = {
 
   &__img {
     width: 49%;
+  }
+}
+
+@media (max-width: 768px) {
+  .body-two {
+    flex-wrap: wrap;
+
+    &__content {
+      padding: 2rem;
+      width: 100%;
+    }
   }
 }
 </style>

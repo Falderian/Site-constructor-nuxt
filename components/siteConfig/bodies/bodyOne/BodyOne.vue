@@ -6,6 +6,7 @@
       <EditorsPick />
       <FeaturedProducts :config="productsConfig" />
       <FeaturedAboutTwo :config="aboutConfig" />
+      <FeaturedPostsTwo :config="postsConfig" />
     </div>
   </div>
 </template>
@@ -16,6 +17,7 @@ import BodyCarousel from './BodyCarousel.vue';
 import EditorsPick from './EditorsPick.vue';
 import FeaturedProducts from '../FeaturedProducts.vue';
 import FeaturedAboutTwo from '../FeaturedAboutTwo.vue';
+import FeaturedPostsTwo from '../FeaturedPostsTwo.vue';
 
 
 const carouselConfig: TCarouselConfig = {
@@ -54,6 +56,29 @@ const aboutConfig = {
     btns: [{ text: 'Buy now', class: 'green' }, { text: 'Read more', class: 'transparent' }]
   }
 }
+
+const post = {
+  img: 'post',
+  tag: 'new',
+  content: {
+    tags: ['Google', 'Trending', 'New'],
+    title: `Loudest à la Madison #1 (L'integral)`,
+    desc: "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
+    date: '22 April 2023',
+    comments: 10,
+    btn: {
+      text: 'Learn More'
+    }
+  }
+}
+
+const postsConfig = {
+  subheading: 'Practice Advice',
+  heading: 'Featured Posts',
+  desc: `Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics `,
+  posts: Array(3).fill(post)
+}
+
 </script>
 
 <style lang="scss" scoped>

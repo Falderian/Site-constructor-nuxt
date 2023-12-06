@@ -48,9 +48,10 @@ const { config } = defineProps({ config: { type: Object, required: true } })
   .posts {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
     gap: 1rem;
-    padding: 1rem;
 
     .post {
       position: relative;
@@ -59,6 +60,7 @@ const { config } = defineProps({ config: { type: Object, required: true } })
       justify-content: center;
       align-items: center;
 
+      width: 45%;
       gap: 1rem;
 
       &__tag {
@@ -100,9 +102,7 @@ const { config } = defineProps({ config: { type: Object, required: true } })
         }
 
         div {
-          padding: 0.5rem 0.8rem;
-
-
+          padding: 0.3rem 0.5rem;
           font-size: 12px;
           color: white;
           background-color: #252B42;
@@ -161,6 +161,32 @@ const { config } = defineProps({ config: { type: Object, required: true } })
     width: 25px;
     border-radius: 50%;
     display: inline-block;
+  }
+}
+
+@media (max-width: 768px) {
+  .posts {
+    flex-wrap: wrap;
+    gap: 2rem;
+
+  }
+}
+
+.container-posts .posts {
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .post {
+    width: 100%;
+    flex-wrap: wrap;
+
+    &__img {
+      height: 50%;
+    }
+
+    &__content {
+      width: 80%;
+    }
   }
 }
 </style>
