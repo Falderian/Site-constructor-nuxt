@@ -13,14 +13,18 @@
     <Grid :items="tableItems" />
     <FeaturedProducts :config="productsConfig" />
     <FeaturedAbout />
+    <FeaturedPosts :config="postsConfig" />
   </div>
 </template>
 
 <script setup lang="ts">
 import IconsRow from '@/components/IconsRow.vue';
-import { default as Grid } from '@/components/grids/tableOneTwo.vue';
+import Grid from '@/components/grids/tableOneTwo.vue';
 import FeaturedProducts from '../FeaturedProducts.vue';
 import FeaturedAbout from '../FeaturedAboutOne.vue';
+import FeaturedPosts from '../FeaturedPostsOne.vue';
+
+
 
 const content = {
   subheading: 'Summer 2023',
@@ -53,6 +57,34 @@ const productsConfig = {
   heading: 'BESTSELLER PRODUCTS',
   subheading: 'Problems trying to resolve the conflict between',
   items: Array(8).fill(productDesign)
+}
+
+const post = {
+  design: {
+    tag: 'sale',
+    img: 'post',
+
+  },
+  content: {
+    subheading: 'English Departament',
+    title: 'Graphic design',
+    desc: `We focus on ergonomics and meeting you where you work. It's only a keystroke away.`,
+    rank: '4.9',
+    sales: 15,
+    prices: ['16.4$', '6.4$'],
+    colors: ['#23A6F0', '#23856D', '#E77C40', '#252B42'],
+    btn: {
+      text: 'Learn more',
+      className: 'Teal'
+    }
+  }
+}
+
+const posts = Array(2).fill(post)
+
+const postsConfig = {
+  heading: 'Featured Posts',
+  subheading: 'Practice Advice', posts
 }
 
 </script>
@@ -108,6 +140,17 @@ const productsConfig = {
 
   &__img {
     width: 49%;
+  }
+}
+
+@media (max-width: 768px) {
+  .body-two {
+    flex-wrap: wrap;
+
+    &__content {
+      padding: 2rem;
+      width: 100%;
+    }
   }
 }
 </style>

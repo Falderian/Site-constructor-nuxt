@@ -12,7 +12,7 @@ export const useSiteOptions = defineStore("siteOptions", () => {
 
   const currentSiteOptions = reactive({
     header: availableOptions.header[0],
-    body: availableOptions.body[1],
+    body: availableOptions.body[0],
     footer: availableOptions.footer[0],
   } as TSiteOptions);
 

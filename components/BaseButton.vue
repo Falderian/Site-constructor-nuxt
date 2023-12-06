@@ -44,4 +44,18 @@ const { action, className, text } = defineProps({
     scale: 1;
   }
 }
+
+.teal {
+  background-color: transparent;
+  border: 1px solid $color-btn-active;
+  border-radius: 30px;
+  color: $color-btn-active;
+  text-transform: capitalize;
+  padding: 0.8rem;
+
+  &:hover {
+    scale: 1.1;
+    border: 1px solid $color-btn-active;
+  }
+}
 </style>
