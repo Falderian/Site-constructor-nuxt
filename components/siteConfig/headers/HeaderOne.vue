@@ -34,10 +34,19 @@ const { config } = defineProps({
     font-weight: bold;
   }
 
+  div:first-child {
+    grid-area: b;
+  }
+
+  div:first-child {
+    grid-area: c;
+  }
+
   &__menu {
     display: flex;
     align-items: center;
     gap: 1rem;
+
 
     .menu__item {
       color: $color-text-gray;
@@ -63,6 +72,54 @@ const { config } = defineProps({
       &:hover {
         scale: 1.21;
       }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .header__logo {
+    font-size: 1.2rem;
+  }
+
+
+  .header {
+    display: grid;
+    grid-template:
+      'a a a'
+      'c c c'
+      'c c c';
+    justify-items: center;
+
+    &__logo {
+      grid-area: a;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    grid-template:
+      "a a b"
+      "a a b"
+      "c c b";
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 14px;
+
+    &__logo {
+      padding: 0;
+    }
+
+    .menu__item {
+      font-size: 14px;
     }
   }
 }

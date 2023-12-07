@@ -7,12 +7,14 @@ export const useSiteOptions = defineStore("siteOptions", () => {
   const availableOptions = {
     header: nums.map((el) => "header" + el),
     body: nums.map((el) => "body" + el),
+    content: nums.map((el) => "content" + el),
     footer: nums.map((el) => "footer" + el),
   };
 
   const currentSiteOptions = reactive({
     header: availableOptions.header[0],
     body: availableOptions.body[0],
+    content: availableOptions.content[0],
     footer: availableOptions.footer[0],
   } as TSiteOptions);
 

@@ -1,6 +1,7 @@
 type TSiteOptions = {
   header: string;
-  body: string;
+  body?: string;
+  content?: string;
   footer: string;
 };
 
@@ -14,4 +15,17 @@ type TCarouselConfig = {
   };
 };
 
-export type { TSiteOptions, TCarouselConfig };
+type TCard = {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+  rating: {
+    rate: number;
+    count: number;
+  };
+};
+
+export type { TSiteOptions, TCarouselConfig, TCard };

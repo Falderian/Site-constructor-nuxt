@@ -7,15 +7,13 @@
 const { variant } = defineProps({
   variant: { type: String, required: true },
 });
-
-
 </script>
 
 <script lang="ts">
-import FooterOne from "./FooterOne.vue";
-import FooterTwo from "./FooterTwo.vue";
+import ContentOne from "./contentOne/ContentOne.vue";
+import ContentTwo from "./contentTwo/ContentTwo.vue";
 
 export default {
-  components: { FooterOne, FooterTwo },
+  components: { ContentOne, ContentTwo },
 };
 </script>
