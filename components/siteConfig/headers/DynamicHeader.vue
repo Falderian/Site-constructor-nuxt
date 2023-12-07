@@ -10,7 +10,7 @@ const { variant } = defineProps({
 
 const config = {
   logo: "Store",
-  pages: ["Home", "Shop", "About", "Blog", "Contact", "Pages"],
+  pages: ["Home", "Shop", "About", "Blog", "Contact"],
   icons: {
     search: '',
     cart: 1,

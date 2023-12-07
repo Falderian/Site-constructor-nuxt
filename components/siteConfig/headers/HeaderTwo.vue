@@ -2,7 +2,7 @@
   <div class="header anim-fade-in">
     <span class="header__logo pad-1">{{ config.logo }}</span>
     <div class="header__menu">
-      <span v-for="page in config.pages" :key="page" :class="['menu__item', page === 'Shop' && 'bold']">{{ page }}</span>
+      <span v-for="page in config.pages" :key="page" :class="['menu__item', page === 'Home' && 'bold']">{{ page }}</span>
     </div>
     <div class="header__menu">
       <div class="menu__login">
@@ -66,5 +66,64 @@ const { config } = defineProps({
       }
     }
   }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    grid-template:
+      "a b b"
+      "a b b"
+      "a c c"
+    ;
+
+
+    &__menu {
+      width: 100%;
+    }
+
+    &__logo {
+      grid-area: a;
+    }
+
+    &__menu:first-child {
+      grid-area: b;
+    }
+
+    &__menu:last-child {
+      grid-area: c;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+
+
+
+    &__logo {
+      padding: 0;
+    }
+
+    &__menu {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    font-size: 14px;
+
+    .menu__item {
+      font-size: 14px;
+    }
+  }
+
 }
 </style>

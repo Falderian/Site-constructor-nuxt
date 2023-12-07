@@ -1,4 +1,3 @@
-import { BaseButton } from '../../../.nuxt/components';
 <template>
   <div class="anim-fade-in footer-container">
     <div class="footer__links">
