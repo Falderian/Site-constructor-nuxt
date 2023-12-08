@@ -19,6 +19,7 @@ import DynamicFooter from "@/components/siteConfig/footers/DynamicFooter.vue";
 
 const siteOptions = useSiteOptions();
 const route = useRoute();
+
 const { header, footer } = siteOptions.currentSiteOptions;
 const { availableOptions } = siteOptions;
 
@@ -32,15 +33,15 @@ const currentOptions = ref({
 
 watch(
   () => route.path,
-  (route) => {
+  () => {
     switchOptions()
   },
 );
 
 const switchOptions = () => {
   const { path } = route;
-  const curr = path.substring(path.lastIndexOf('/') + 1, path.length)
-  switch (curr) {
+  const currPath = path.substring(path.lastIndexOf('/') + 1, path.length)
+  switch (currPath) {
     case 'home':
       currOptions.value = { header: availableOptions.header, body: availableOptions.body, footer: availableOptions.footer }
       break;
