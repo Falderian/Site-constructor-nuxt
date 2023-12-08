@@ -15,7 +15,7 @@ type TCarouselConfig = {
   };
 };
 
-export interface ICard {
+interface ICard {
   id: number;
   title: string;
   price: number;
@@ -24,7 +24,7 @@ export interface ICard {
   images: string[];
 }
 
-export interface Category {
+interface Category {
   id: number;
   name: string;
   image: string;
