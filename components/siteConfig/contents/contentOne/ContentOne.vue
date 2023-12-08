@@ -1,13 +1,13 @@
 <template>
   <div class="anim-fade-in content">
-    <ContentCardOne v-for="post in posts" :card="post" :key="post" />
+    <ContentCardOne v-for="card in content" :card="card" :key="card.title" />
   </div>
 </template>
 
 <script setup lang="ts">
 import ContentCardOne from './ContentCardOne.vue';
 
-const { data: posts } = await useAsyncData('posts', () => $fetch('https://fakestoreapi.com/products?limit=10'))
+const { content } = defineProps({ content: { type: Array as PropType<ICard[]>, required: true } })
 </script>
 
 <style scoped lang="scss">
@@ -16,6 +16,6 @@ const { data: posts } = await useAsyncData('posts', () => $fetch('https://fakest
   flex-wrap: wrap;
   justify-content: space-around;
 
-  gap: 1rem;
+  gap: 2rem;
 }
 </style>

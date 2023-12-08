@@ -15,17 +15,19 @@ type TCarouselConfig = {
   };
 };
 
-type TCard = {
+export interface ICard {
   id: number;
   title: string;
   price: number;
   description: string;
-  category: string;
-  image: string;
-  rating: {
-    rate: number;
-    count: number;
-  };
-};
+  category: Category;
+  images: string[];
+}
 
-export type { TSiteOptions, TCarouselConfig, TCard };
+export interface Category {
+  id: number;
+  name: string;
+  image: string;
+}
+
+export type { TSiteOptions, TCarouselConfig, ICard };
