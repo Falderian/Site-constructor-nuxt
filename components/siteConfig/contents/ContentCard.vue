@@ -28,11 +28,11 @@ const cardImage = ref(initialImage)
 
 const handleImageChange = (e: Event, type: string) => {
   if (card.images[0] === "https://placeimg.com/640/480/any") return
-  e.target.classList.toggle('anim-fade-in');
+  (e.target as HTMLDivElement).classList.toggle('anim-fade-in');
 
   switch (type) {
     case 'enter':
-      cardImage.value = card.images[1];
+      cardImage.value = card.images[1] || card.category.image;
       break;
     case 'leave': {
       cardImage.value = initialImage;
@@ -47,6 +47,7 @@ const handleImageChange = (e: Event, type: string) => {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 30%;
+  height: 100%;
 
   justify-items: center;
   align-items: center;
@@ -68,7 +69,6 @@ const handleImageChange = (e: Event, type: string) => {
     justify-content: center;
 
     gap: 0.3rem;
-
   }
 
   &__ranking {
@@ -96,8 +96,6 @@ const handleImageChange = (e: Event, type: string) => {
     align-items: center;
     justify-content: center;
     height: 100%;
-
-
 
     img {
       width: 100%;
