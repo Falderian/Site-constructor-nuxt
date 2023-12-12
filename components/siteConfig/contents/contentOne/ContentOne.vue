@@ -116,4 +116,26 @@ const hanldeLimitChange = () => {
     height: 100%;
   }
 }
+
+@media (max-width: 1024px) {
+  .content__cards {
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 2rem;
+
+    .card {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .content__cards {
+    padding: 1rem 0rem;
+
+    .card {
+      width: 100%;
+    }
+  }
+}
 </style>

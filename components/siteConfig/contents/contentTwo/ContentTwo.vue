@@ -57,4 +57,20 @@ const handleClick = () => appendContent();
     gap: 1rem 0;
   }
 }
+
+@media (max-width: 1024px) {
+  .content__cards {
+    .card {
+      width: 45%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .content__cards {
+    .card {
+      width: 80%;
+    }
+  }
+}
 </style>

@@ -40,7 +40,8 @@ watch(
 
 const switchOptions = () => {
   const { path } = route;
-  const currPath = path.substring(path.lastIndexOf('/') + 1, path.length)
+  const currPath = path.substring(path.lastIndexOf('/') + 1, path.length);
+
   switch (currPath) {
     case 'home':
       currOptions.value = { header: availableOptions.header, body: availableOptions.body, footer: availableOptions.footer }
